@@ -99,5 +99,6 @@ gsettings set org.gnome.desktop.interface cursor-theme 'Nordic-cursors'
 gsettings set org.gnome.desktop.interface icon-theme 'Tokyonight-Dark-Icons'
 gsettings set org.gnome.shell.extensions.user-theme name 'Tokyonight-Dark-Theme'
 gsettings set org.gnome.desktop.interface gtk-theme 'Tokyonight-Dark-Theme'
+gsettings set org.gnome.desktop.background picture-uri-dark 'file:///usr/share/wallpapers/space-planet-blue-and-purple.avif'
 
 echo "Process completed. GNOME settings updated."
