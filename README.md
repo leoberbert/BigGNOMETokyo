@@ -51,7 +51,7 @@ It also saves the current GNOME settings, including:
 The script extracts and installs the following:
 
 - **Icon theme**: `Tokyonight-Dark-Icons`
-- **GTK theme**: `Tokyonight-Dark`
+- **GTK theme**: `Tokyonight-Dark-Theme`
 - **Cursor theme**: `Nordic-cursors`
 
 After installation, it configures GNOME to use the new themes and cursors.
