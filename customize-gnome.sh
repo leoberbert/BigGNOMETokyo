@@ -59,11 +59,11 @@ else
     echo "Directory $ICONS_DIR/Tokyonight-Dark-Icons already exists. Skipping..."
 fi
 
-if [ ! -d "$ICONS_DIR/Tokyonight-Dark-Theme" ]; then
-    echo "Directory $ICONS_DIR/Tokyonight-Dark-Theme not found. Extracting..."
-    sudo tar -I zstd -xf Tokyonight-Dark-Theme.tar.zst -C "$ICONS_DIR"
+if [ ! -d "$THEMES_DIR=Tokyonight-Dark-Theme" ]; then
+    echo "Directory $THEMES_DIR/Tokyonight-Dark-Theme not found. Extracting..."
+    sudo tar -I zstd -xf Tokyonight-Dark-Theme.tar.zst -C "$THEMES_DIR"
 else
-    echo "Directory $ICONS_DIR/Tokyonight-Dark-Theme already exists. Skipping..."
+    echo "Directory $THEMES_DIR/Tokyonight-Dark-Theme already exists. Skipping..."
 fi
 
 if [ ! -d "$ICONS_DIR/Nordic-cursors" ]; then
@@ -81,7 +81,7 @@ else
     echo "Directory $GTK4_DIR not found. Creating..."
     mkdir -p "$GTK4_DIR"
 fi
-cp -rp "$THEMES_DIR/Tokyonight-Dark/gtk-4.0" "$GTK4_DIR/"
+cp -rp $THEMES_DIR/Tokyonight-Dark-Theme/gtk-4.0/* $GTK4_DIR/
 
 # Backup and update GTK 3 configuration
 if [ -d "$GTK3_DIR" ]; then
@@ -91,13 +91,13 @@ else
     echo "Directory $GTK3_DIR not found. Creating..."
     mkdir -p "$GTK3_DIR"
 fi
-cp -rp "$THEMES_DIR/Tokyonight-Dark/gtk-3.0" "$GTK3_DIR/"
+cp -rp $THEMES_DIR/Tokyonight-Dark-Theme/gtk-3.0/* $GTK3_DIR/
 
 # Apply new GNOME settings
 echo "Applying new GNOME settings..."
 gsettings set org.gnome.desktop.interface cursor-theme 'Nordic-cursors'
-gsettings set org.gnome.desktop.interface icon-theme 'Tokyonight-Dark'
-gsettings set org.gnome.shell.extensions.user-theme name 'Tokyonight-Dark'
-gsettings set org.gnome.desktop.interface gtk-theme 'Tokyonight-Dark-dark'
+gsettings set org.gnome.desktop.interface icon-theme 'Tokyonight-Dark-Icons'
+gsettings set org.gnome.shell.extensions.user-theme name 'Tokyonight-Dark-Theme'
+gsettings set org.gnome.desktop.interface gtk-theme 'Tokyonight-Dark-Theme'
 
 echo "Process completed. GNOME settings updated."
