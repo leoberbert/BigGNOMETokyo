@@ -46,6 +46,13 @@ It also saves the current GNOME settings, including:
 
 ---
 
+### 🎨 Screenshot:
+
+![image](https://github.com/user-attachments/assets/1cb7a8bb-8467-4cdc-bbd0-1020e5998a90)
+
+
+---
+
 ### 🎨 Configuration:
 
 The script extracts and installs the following:
