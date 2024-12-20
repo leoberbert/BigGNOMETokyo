@@ -48,7 +48,10 @@ It also saves the current GNOME settings, including:
 
 ### 🎨 Screenshot:
 
-![image](https://github.com/user-attachments/assets/1cb7a8bb-8467-4cdc-bbd0-1020e5998a90)
+![image](https://github.com/user-attachments/assets/13f239c2-cf2e-46e2-8149-8f076b3a1f82)
+
+
+![image](https://github.com/user-attachments/assets/3d628d7e-4284-4d3c-ac43-850fb33da8e5)
 
 
 ---
