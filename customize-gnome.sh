@@ -17,6 +17,7 @@
 
 ICONS_DIR="/usr/share/icons"
 THEMES_DIR="/usr/share/themes"
+WALL_DIR="/usr/share/wallpapers"
 GTK4_DIR="$HOME/.config/gtk-4.0"
 GTK3_DIR="$HOME/.config/gtk-3.0"
 BACKUP_DIR="$HOME/backup_customizations"
@@ -92,6 +93,7 @@ else
     mkdir -p "$GTK3_DIR"
 fi
 cp -rp $THEMES_DIR/Tokyonight-Dark-Theme/gtk-3.0/* $GTK3_DIR/
+cp -f tokyonight*.avif $WALL_DIR/
 
 # Apply new GNOME settings
 echo "Applying new GNOME settings..."
@@ -99,6 +101,7 @@ gsettings set org.gnome.desktop.interface cursor-theme 'Nordic-cursors'
 gsettings set org.gnome.desktop.interface icon-theme 'Tokyonight-Dark-Icons'
 gsettings set org.gnome.shell.extensions.user-theme name 'Tokyonight-Dark-Theme'
 gsettings set org.gnome.desktop.interface gtk-theme 'Tokyonight-Dark-Theme'
-gsettings set org.gnome.desktop.background picture-uri-dark 'file:///usr/share/wallpapers/space-planet-blue-and-purple.avif'
+gsettings set org.gnome.desktop.background picture-uri-dark "file://${WALL_DIR}/tokyonight1.avif"
+gsettings set org.gnome.desktop.background picture-uri "file://${WALL_DIR}/tokyonight1.avif"
 
 echo "Process completed. GNOME settings updated."
