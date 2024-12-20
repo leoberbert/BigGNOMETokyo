@@ -93,7 +93,7 @@ else
     mkdir -p "$GTK3_DIR"
 fi
 cp -rp $THEMES_DIR/Tokyonight-Dark-Theme/gtk-3.0/* $GTK3_DIR/
-cp -f tokyonight*.avif $WALL_DIR/
+sudo cp -f tokyonight*.avif $WALL_DIR/
 
 # Apply new GNOME settings
 echo "Applying new GNOME settings..."
